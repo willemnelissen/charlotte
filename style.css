@@ -1,0 +1,82 @@
+body {
+    background: gold;
+}
+#hi-text {
+    color: black;
+    font-size: 3vh;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-left: 10px
+}
+#letters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: top;
+    width: 100vw;
+    background: gold;
+}
+
+.letter {
+    opacity: 0;
+    transition: 1s;
+    font-size: 40vh;
+    font-weight: 800;
+    animation: 1s flyIn ease-in-out forwards;
+}
+
+.letter-c {
+    animation-delay: 0ms;
+}
+.letter-h {
+    animation-delay: 100ms;
+}
+.letter-a {
+    animation-delay: 200ms
+}
+.letter-r {
+    animation-delay: 300ms
+}
+.letter-l {
+    animation-delay: 400ms
+}
+.letter-i {
+    animation-delay: 500ms
+}
+.letter-e {
+    animation-delay: 600ms
+}
+
+.letter:hover {
+    background: url(text817.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fly-out {
+    animation: 1s moveOut forwards;
+}
+
+@keyframes moveOut {
+    100% {transform: translateX(100%)}
+}
+
+.fly-in {
+    animation: 1s moveIn forwards;
+}
+
+@keyframes moveIn {
+    100% {transform: translateX(0)}
+}
